@@ -1,0 +1,21 @@
+{
+  "name": "bembam",
+  "version": "0.0.1",
+  "description": "A tiny tool for easily building BEM class names in JavaScript.",
+  "keywords": ["css", "bem", "utility"],
+  "author": {
+    "name": "James Meyers",
+    "url": "https://github.com/FullR"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FullR/bembam"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
