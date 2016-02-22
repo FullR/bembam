@@ -28,7 +28,7 @@ class Zoo extends React.Component {
       .mod("awesome");
 
     return (
-      <div className={className.toString()}>
+      <div className={cn.toString()}>
         <button className={cn.el("dog")}>Woof!</button>
         <button className={cn.el("cat")}>Meow</button>
       </div>
