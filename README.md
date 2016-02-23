@@ -13,7 +13,7 @@ const className = bembam("block", "other-name") // block name and any additional
 
 const elName = className.el("element"); // block__element
 
-className.toString(); // returns "block other-name block__green"
+className.toString(); // returns "block other-name block--green"
 ```
 
 With React:
