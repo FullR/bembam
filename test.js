@@ -58,6 +58,7 @@ describe("#mod", () => {
       .mod(null)
       .mod(undefined)
       .mod(false)
+      .mod("mod", null, false)
       .toString();
 
     if(result !== "a b c d a--green") {
