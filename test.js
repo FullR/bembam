@@ -74,13 +74,4 @@ describe("#el", () => {
       throw new Error("Incorrect modifier name:" + result);
     }
   });
-
-  it("should throw an error if the element name is falsy", (done) => {
-    try {
-      bembam("a").el(null);
-      done(new Error("didn't throw an error when element name was falsy"));
-    } catch(error) {
-      done();
-    }
-  });
-})
+});
