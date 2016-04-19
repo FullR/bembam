@@ -6,7 +6,8 @@ A tiny tool for easily building [BEM](https://en.bem.info/) class names in JavaS
 ## Usage
 
 ```javascript
-const disabled = false;
+const disabled = true;
+const isOn = false;
 const className = bembam("block", "other-name") // block name and any additional class names
   .mod("green") // unconditional modifier
   .mod("disabled", disabled) // conditional modifier
