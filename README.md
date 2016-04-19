@@ -9,7 +9,8 @@ A tiny tool for easily building [BEM](https://en.bem.info/) class names in JavaS
 const disabled = false;
 const className = bembam("block", "other-name") // block name and any additional class names
   .mod("green") // unconditional modifier
-  .mod("disabled", disabled); // conditional modifier
+  .mod("disabled", disabled) // conditional modifier
+  .mod("on", "off", isOn); // conditional modifier with disabled class name
 
 const elName = className.el("element"); // block__element
 
@@ -44,9 +45,9 @@ class Zoo extends React.Component {
 
 Creates a `bembam` instance. Takes the blockname and any number of additional classnames. Falsy classnames will be ignored.
 
-#### `#mod(modifierName:String, conditional:Bool) -> BemBam`
+#### `#mod(modifierName:String [, disabledModifierName:String], conditional:Bool) -> BemBam`
 
-Adds the modifier name to the `bembam` instance if `conditional` is either not defined or truthy. The modifier will be rendered as `blockName--modifierName` in the result string. Falsy modifier names will be ignored. Returns the original `BemBam` instance for chaining.
+Adds the modifier name to the `bembam` instance if `conditional` is either not defined or truthy. The modifier will be rendered as `blockName--modifierName` in the result string. If three arguments are passed, the final argument is the conditional and the second argument is used as the modifier name if the condition is falsy. Falsy modifier names will be ignored. Returns the original `BemBam` instance for chaining.
 
 #### `#el(elementName:String) -> String`
 

@@ -42,6 +42,16 @@ describe("#mod", () => {
     }
   });
 
+  it("should add a negated modifier if the condition is false and three arguments are passed", () => {
+    const result = bembam("a")
+      .mod("b", "c", false)
+      .toString();
+
+    if(result !== "a a--c") {
+      throw new Error("negated modifier not present: '" + result + "'");
+    }
+  });
+
   it("should ignore falsy modifier names", () => {
     const result = bembam("a", "b", "c", "d")
       .mod("green")

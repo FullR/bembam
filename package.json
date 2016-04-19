@@ -1,6 +1,6 @@
 {
   "name": "bembam",
-  "version": "0.0.22",
+  "version": "1.0.0",
   "description": "A tiny tool for easily building BEM class names in JavaScript.",
   "keywords": ["css", "bem", "utility"],
   "author": {

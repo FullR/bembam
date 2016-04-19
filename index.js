@@ -6,9 +6,22 @@ function BemBam(name, otherNames) {
   this.mods = [];
 }
 
-BemBam.prototype.mod = function mod(modName, cond) {
-  if(modName && (cond || arguments.length < 2)) {
-    this.mods.push(this.name + "--" + modName);
+BemBam.prototype.mod = function mod() {
+  if(!arguments[0]) return this;
+  switch(arguments.length) {
+    case 1: 
+      this.mods.push(this.name + "--" + arguments[0]);
+    break;
+    case 2:
+      if(arguments[1]) this.mods.push(this.name + "--" + arguments[1]);
+    break;
+    case 3:
+      if(arguments[2]) {
+        this.mods.push(this.name + "--" + arguments[0]);
+      } else if(arguments[1]) {
+        this.mods.push(this.name + "--" + arguments[1]);
+      }
+    break;
   }
   return this;
 };
