@@ -15,7 +15,7 @@ const className = bembam("block", "other-name") // block name and any additional
 
 const elName = className.el("element"); // block__element
 
-className.toString(); // returns "block other-name block--green"
+className.toString(); // returns "block other-name block--green block--off"
 ```
 
 With React:
