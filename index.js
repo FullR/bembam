@@ -20,7 +20,7 @@ BemBam.prototype.mod = function mod() {
       this.mods.push(this.name + "--" + arguments[0]);
     break;
     case 2: // mod name and conditional
-      if(arguments[1]) this.mods.push(this.name + "--" + arguments[1]);
+      if(arguments[1]) this.mods.push(this.name + "--" + arguments[0]);
     break;
     case 3: // mod name, false mod name, conditional
       if(arguments[2]) {
